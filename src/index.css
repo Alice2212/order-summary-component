@@ -1,13 +1,202 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --body-font: "Red Hat Display", sans-serif;
+}
+
+body {
+  background: url("Assets/pattern-background-desktop.svg"), var(--pale-blue);
+  background-repeat: no-repeat;
+  position: relative;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  left: 38%;
+  margin-top: 1%;
+  background-color: #fff;
+  min-height: 95vh;
+  width: 25vw;
+  border-radius: 10px;
+}
+
+.hero img {
+  position: absolute;
+  left: -0.09px;
+  height: 40%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.summary-container {
+  flex-direction: column;
+  max-width: 21vw;
+  margin: auto;
+  position: absolute;
+  top: 42%;
+}
+
+.summary-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.summary-content h1 {
+  font-family: var(--body-font);
+  color: var(--dark-blue);
+}
+
+p {
+  padding-top: 10px;
+  font-size: 1.1rem;
+  line-height: 22px;
+  color: var(--desaturated-blue);
+}
+
+.order-plan {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+  height: 12vh;
+}
+
+.order-plan img {
+  border-radius: 50%;
+  margin-left: 1rem;
+  height: 50px;
+  width: 50px;
+}
+
+.order-plan > .plan-details h3 {
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  margin-bottom: -10px;
+  color: var(--dark-blue);
+}
+
+.order-plan > .plan-details p {
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  margin-bottom: -10px;
+  color: var(--dark-blue);
+}
+
+.order-plan a {
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.payment {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.payment button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--Bright-blue);
+  border: none;
+  border-radius: 5px;
+  font-family: var(--body-font);
+  font-weight: 400;
+  color: #fff;
+  box-shadow: 0px 10px 10px rgba(168, 173, 190, 0.9);
+  cursor: pointer;
+}
+
+.payment button:hover {
+  opacity: 0.7;
+}
+
+.payment p {
+  padding-top: 15px;
+  font-size: 0.9rem;
+}
+
+.payment p:hover {
+  font-weight: 900;
+  color: #000;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+  body {
+    background: url("Assets/pattern-background-mobile.svg"), var(--pale-blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20px;
+    position: relative;
+    margin: auto;
+  }
+
+  .container {
+    width: 40vw;
+  }
+
+  img {
+    height: 35%;
+  }
+
+  .summary-container {
+    top: 42%;
+    max-width: 35vw;
+  }
+
+  .summary-content h1 {
+    margin: auto;
+    font-size: 1rem;
+  }
+
+  .summary-content p {
+    font-size: 0.7rem;
+    padding-top: 5px;
+    line-height: 18px;
+  }
+
+  .order-plan {
+    height: 15vh;
+  }
+
+  .order-plan img {
+    margin-left: 1rem;
+  }
+
+  /* .order-plan > .plan-details {
+    margin-left: 2.8rem;
+  } */
+
+  .order-plan > .plan-details h3 {
+    font-size: 0.7rem;
+  }
+
+  .order-plan > .plan-details p {
+    font-size: 0.6rem;
+  }
+  .order-plan a {
+    margin-right: 1rem;
+    font-size: 0.8rem;
+  }
 }
