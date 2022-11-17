@@ -29,11 +29,11 @@ body {
 
 .container {
   position: relative;
-  left: 38%;
+  left: 35%;
   margin-top: 1%;
   background-color: #fff;
   min-height: 95vh;
-  width: 25vw;
+  width: 31vw;
   border-radius: 10px;
 }
 
@@ -47,7 +47,7 @@ body {
 
 .summary-container {
   flex-direction: column;
-  max-width: 21vw;
+  max-width: 80%;
   margin: auto;
   position: absolute;
   top: 42%;
@@ -61,6 +61,7 @@ body {
 .summary-content h1 {
   font-family: var(--body-font);
   color: var(--dark-blue);
+  font-size: 1.5rem;
 }
 
 p {
@@ -142,7 +143,7 @@ a:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   body {
     background: url("Assets/pattern-background-mobile.svg"), var(--pale-blue);
     background-repeat: no-repeat;
@@ -153,7 +154,8 @@ a:hover {
   }
 
   .container {
-    width: 40vw;
+    width: 70%;
+    min-height: 95vh;
   }
 
   img {
